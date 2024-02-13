@@ -56,5 +56,6 @@ public class Program {
                 if (min > n) min = n;
             }
         }
+        scanner.close();
     }
 }
