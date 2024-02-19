@@ -23,5 +23,6 @@ public class Program {
             if (!notSimple) count++;
         }
         System.out.println("Count of coffee-request – " + count);
+        scanner.close();
     }
 }

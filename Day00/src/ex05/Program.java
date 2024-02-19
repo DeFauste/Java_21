@@ -49,7 +49,7 @@ public class Program {
             }
         }
         showArray2D(classes);
-
+        
         scanner.close();
     }
 
