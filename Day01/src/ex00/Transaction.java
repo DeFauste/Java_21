@@ -5,8 +5,8 @@ import java.util.UUID;
 public class Transaction {
 
     public Transaction(User recipient, User sender, TransferCategory category, Integer amount) {
-        Recipient = recipient;
-        Sender = sender;
+        this.recipient = recipient;
+        this.sender = sender;
         transferCategory = category;
         transferAmount = category == TransferCategory.CREDITS ? amount : -amount;
     }
@@ -16,22 +16,22 @@ public class Transaction {
         CREDITS
     }
 
-    private UUID Identifier;
+    private UUID id;
 
-    public UUID getIdentifier() {
-        return Identifier;
+    public UUID getId() {
+        return id;
     }
 
-    private User Recipient;
+    private User recipient;
 
     public User getRecipient() {
-        return Recipient;
+        return recipient;
     }
 
-    private User Sender;
+    private User sender;
 
     public User getSender() {
-        return Sender;
+        return sender;
     }
 
     private TransferCategory transferCategory;

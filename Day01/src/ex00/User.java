@@ -4,30 +4,30 @@ import java.util.UUID;
 
 public class User {
     public User(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    private UUID Identifier;
+    private UUID id;
 
-    public UUID getIdentifier() {
-        return Identifier;
+    public UUID getId() {
+        return id;
     }
 
-    private String Name;
+    private String name;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    private Integer Balance = 0;
+    private Integer balance = 0;
 
     public Integer getBalance() {
-        return Balance;
+        return balance;
     }
 
     public void setBalance(Integer balance) {
         if (balance < 0)
             System.err.println("Balance cannot be negative!");
-        else Balance = balance;
+        else this.balance = balance;
     }
 }
