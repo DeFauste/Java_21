@@ -3,6 +3,9 @@ package ex03;
 import java.util.UUID;
 
 public class User {
+
+    TransactionsLinkedList transactions = new TransactionsLinkedList();
+
     public User(String name) {
         this.name = name;
     }
