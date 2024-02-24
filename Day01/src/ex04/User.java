@@ -1,10 +1,18 @@
 package ex04;
 
-import java.util.UUID;
+import ex02.UserIdsGenerator;
 
 public class User {
+
+    TransactionsLinkedList transactions = new TransactionsLinkedList();
+
     public User(String name) {
+        id = UserIdsGenerator.getInstance().generateId();
         this.name = name;
+    }
+    public User(String name, int balance) {
+        this(name);
+        this.balance = balance;
     }
 
     private int id;

@@ -50,4 +50,9 @@ public class UsersArrayList implements UsersList {
         }
         return users[index];
     }
+
+    @Override
+    public int getCountUser() {
+        return index;
+    }
 }
