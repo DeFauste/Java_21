@@ -27,8 +27,9 @@ public class FileSignaturesLog {
         if (fileOutputStream != null) {
             String inputLine = "";
             boolean writen = false;
-            while (!inputLine.equals("42")) {
+            while (true) {
                 inputLine = scanner.nextLine();
+                if(inputLine.equals("42")) break;
                 writen = WriteLogFileSignatures(inputLine);
                 if(writen ) {
                     System.out.println("PROCESSED");

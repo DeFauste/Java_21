@@ -18,7 +18,7 @@ public class GetFileSignatures {
         try {
             fileInputStream = new FileInputStream(file);
             for (int i = 0; i < 8 && fileInputStream.available() > 0; ++i) {
-                buffer.append(String.format(" %02X", fileInputStream.read()));
+                buffer.append(String.format("%02X", fileInputStream.read()));
             }
             fileInputStream.close();
         } catch (IOException e) {

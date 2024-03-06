@@ -34,7 +34,7 @@ public class ReadSignatures {
                 while (fileInputStream.available() > 0) {
                     c = (char) fileInputStream.read();
                     if (c != '\n' ) {
-                        buffer.append(String.format(" %c", c));
+                        buffer.append(String.format("%c", c));
                     }
                     if(c == '\n'){
                         PutToMap(buffer.toString());
@@ -50,8 +50,8 @@ public class ReadSignatures {
 
     private void PutToMap(String line) {
         if (line != null) {
-            String[] pair = line.split(", ");
-            keyMap.put(pair[1], pair[0]);
+            String[] pair = line.replace(" ", "").split(",");
+            keyMap.put(pair[1].trim(), pair[0].trim());
         }
     }
 
