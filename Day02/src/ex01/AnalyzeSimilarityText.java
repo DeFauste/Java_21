@@ -1,5 +1,6 @@
 package ex01;
 
+
 import javafx.util.Pair;
 
 import java.io.BufferedReader;
@@ -42,7 +43,7 @@ public class AnalyzeSimilarityText {
                         } else if (nFile == 2) {
                             second += 1;
                         }
-                        similarityMap.put(word, new Pair<>(first, second));
+                        similarityMap.replace(word, new Pair<>(first, second));
                     }
                 }
             }
@@ -60,13 +61,11 @@ public class AnalyzeSimilarityText {
         double B = 0.0;
 
         double quotient = 0.0;
-
         for (Pair<Integer, Integer> t : similarityMap.values()) {
             dividend += t.getKey() * t.getValue();
             A += t.getKey() * t.getKey();
             B += t.getValue() * t.getValue();
         }
-        System.out.println(dividend);
         divisor = Math.sqrt(A) * Math.sqrt(B);
         quotient = dividend / divisor;
 

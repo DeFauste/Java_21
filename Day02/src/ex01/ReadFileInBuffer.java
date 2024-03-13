@@ -13,7 +13,7 @@ public class ReadFileInBuffer {
         dictionary_ = dictionary;
     }
 
-    public HashSet<String> GetDictionaryFile(String fileName) {
+    public HashSet<String> AddDictionaryFromFile(String fileName) {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))){
             String line;
