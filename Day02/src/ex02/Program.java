@@ -7,9 +7,8 @@ public class Program {
 
         System.out.println(Arrays.toString(args));
         UnixEmulator unixEmulator = new UnixEmulator(args);
-        System.out.print("path: ");
-        unixEmulator.ShowPath();
-        System.out.println("--");
+
+
 
     }
 }
